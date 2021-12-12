@@ -16,32 +16,29 @@ class TripplanForms(FormAction):
   return "trip_plan_form"
 
  def required_slots(self,tracker) -> List[Text]:
-  return ["travel_date","travel_period","trip_type","adults","child","budget","email","phno"]
+  return ["life_meaningless","scared_withoutreason","over_react","close_panic","relax_diff","work_initiate","worth_less"]
  def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
     return {
-            "travel_date": [
+            "life_meaningless": [
                 self.from_text(),
             ],
-            "travel_period": [
+            "scared_withoutreason": [
                 self.from_text(),
             ],
             
-            "trip_type": [
+            "over_react": [
                 self.from_text(),
             ],
-            "adults": [
+            "close_panic": [
                 self.from_text(),
             ],
-            "child": [
+            "relax_diff": [
                 self.from_text(),
             ],
-            "budget": [
+            "work_initiate": [
                 self.from_text(),
             ],
-            "email": [
-                self.from_text(),
-            ],
-            "phno": [
+            "worth_less": [
                 self.from_text(),
             ],
         }
@@ -51,8 +48,8 @@ class TripplanForms(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-    dispatcher.utter_message("❤️❤️❤️Thank you so much for showing your intrest in traveling with us") 
-    insert_data(tracker.get_slot("travel_date"),tracker.get_slot("travel_period"),tracker.get_slot("trip_type"),tracker.get_slot("adults"),tracker.get_slot("child"),tracker.get_slot("budget"), tracker.get_slot("email"),tracker.get_slot("phno"))	
+    dispatcher.utter_message("❤️❤️❤️Thank you so much for showing your interest in the survey!!!") 
+    insert_data(tracker.get_slot("life_meaningless"),tracker.get_slot("scared_withoutreason"),tracker.get_slot("over_react"),tracker.get_slot("close_panic"),tracker.get_slot("relax_diff"),tracker.get_slot("work_initiate"), tracker.get_slot("worth_less"))	
     return []
 
 class ActivitiesOffered(Action):
