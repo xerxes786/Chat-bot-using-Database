@@ -1,6 +1,6 @@
 import sqlite3
 
-def insert_data(travel_date, travel_period, trip_type, adults, child, budget, email, phno):
+def insert_data(life_meaningless, scared_withoutreason, over_react, close_panic, relax_diff, work_initiate, worth_less):
  conn = sqlite3.connect('demo.db') 
  cursor = conn.cursor()
  print("Database created and Successfully Connected to SQLite")
@@ -15,7 +15,7 @@ def insert_data(travel_date, travel_period, trip_type, adults, child, budget, em
     # email VARCHAR,
     # phno VARCHAR
   # )'''
- cursor.execute('''INSERT INTO d2(travel_date, travel_period, trip_type, adults, child, budget, email, phno) VALUES (?, ?, ?, ?, ?, ?, ?, ?)''', (travel_date, travel_period, trip_type, adults, child, budget, email, phno))
+ cursor.execute('''INSERT INTO d2(life_meaningless, scared_withoutreason, over_react, close_panic, relax_diff, work_initiate, worth_less) VALUES (?, ?, ?, ?, ?, ?, ?, ?)''', (life_meaningless, scared_withoutreason, over_react, close_panic, relax_diff, work_initiate, worth_less))
    
 	
  print("Table created successfully........")
